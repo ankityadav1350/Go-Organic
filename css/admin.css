@@ -1,0 +1,446 @@
+/* 
+    Author: Vijay Thapa;
+    Theme: Food Order Website Admin;
+    Version: 1.0;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #f1f2f6;
+}
+
+.wrapper{
+    padding: 5%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.wrapper-1{
+    padding: 1%;
+    width: 80%;
+    margin: 0 auto;
+    position: fixed;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+.tbl-full{
+    width: 100%;
+}
+.tbl-30{
+    width: 30%;
+}
+
+table tr th{
+    border-bottom: 1px solid black;
+    padding: 1%;
+    text-align: left;
+}
+
+table tr td{
+    padding: 1%;
+}
+
+.btn-primary{
+    position: relative;
+    text-align: center;
+    background-color: #1e90ff;
+    padding: 1.2%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 100px;
+}
+.btn-primary:hover{
+    box-shadow: 
+    0 2px 25px 0 #1e90ff inset, 0 2px 25px 0 #1e90ff, 0 2px 5px 0 #1e90ff inset, 0 2px 5px 0 #1e90ff;
+    text-shadow: 0 0 15px black, 0 0 15px black;
+}
+
+.btn-secondary{
+    position: relative;
+    text-align: center;
+    background-color: #7bed9f;
+    padding: 1.2%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 100px;
+}
+.btn-secondary:hover{
+    box-shadow: 
+    0 2px 25px 0 #2ed573 inset, 0 2px 25px 0 #2ed573, 0 2px 5px 0 #2ed573 inset, 0 2px 5px 0 #2ed573;
+    text-shadow: 0 0 15px black, 0 0 15px black;
+}
+
+.btn-danger{
+    position: relative;
+    text-align: center;
+    background-color: #ff6b81;
+    padding: 1.2%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 100px;
+}
+.btn-danger:hover{
+    background-color: #ff4757;
+    box-shadow: 
+    0 2px 25px 0 #ff4757 inset, 0 2px 25px 0 #ff4757, 0 2px 5px 0 #ff4757 inset, 0 2px 5px 0 #ff4757;
+    text-shadow: 0 0 15px black, 0 0 15px black;
+}
+
+.success{
+    color: #2ed573;
+}
+.error{
+    color: #ff4757;
+}
+
+
+/* CSS for Menu */
+.navbar{
+    height: 6rem;
+    width: 100vw;
+    background-color: #131418;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: fixed;
+    z-index: 10;
+}
+
+/*Styling logo*/
+.logo{
+    padding:1vh 1vw;
+    text-align: center;
+}
+.logo img {
+    height: 5rem;
+    width: 5rem;
+}
+
+/*Styling Links*/
+.menu{
+    display: flex;
+    list-style: none; 
+    width: 88vw;
+    padding: 0 0.7vw;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+}
+.menu li a{
+    color: #ff6b81;
+    text-decoration: none;
+    margin: 0 0.7vw;
+}
+.menu li a:hover {
+    color: #61DAFB;
+}
+.menu li {
+    position: relative;
+}
+/*.menu li a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #61DAFB;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+}*/
+.menu li a:hover::before{
+    width: 80%;
+}
+
+/*Styling Buttons*/
+.login-button{
+    background-color: transparent;
+    border: 1.5px solid #f2f5f7;
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    margin-left: 2vw;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+.login-button:hover {
+    color: #131418;
+    background-color: #f2f5f7;
+    border:1.5px solid #f2f5f7;
+    transition: all ease-in-out 350ms;
+}
+.join-button{
+    color: #131418;
+    background-color: #61DAFB;
+    border: 1.5px solid #61DAFB;
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.join-button:hover {
+    color: #f2f5f7;
+    background-color: transparent;
+    border:1.5px solid #f2f5f7;
+    transition: all ease-in-out 350ms;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div{
+    width: 30px;
+    height:3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.hamburger{
+    display: none;
+}
+
+
+/* CSS for main-content */
+.main-content{
+    background-color: #f1f2f6;
+    padding: 3% 0;
+}
+
+.col-4{
+    width: 18%;
+    background-color: white;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+}
+
+
+/* CSS for Footer */
+.footer {
+    position: fixed;
+    padding: 10px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #393E46;
+    color: white;
+    text-align: center;
+  }
+.footer a{
+    text-decoration: none;
+    color: #E5E0FF;
+}
+
+/* CSS for Login */
+
+.login{
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.login::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#45f3ff,#45f3ff,#45f3ff);
+     z-index: 1;
+     transform-origin: bottom right;
+     animation: animate 6s linear infinite;
+}
+
+.login::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#45f3ff,#45f3ff,#45f3ff);
+     z-index: 1;
+     transform-origin: bottom right;
+     animation: animate 6s linear infinite;
+     animation-delay: -3s;
+}
+.borderLine{
+    position: absolute;
+    top: 0;
+    inset: 0;
+
+}
+.borderLine::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#ff2770,#ff2770,#ff2770);
+     z-index: 1;
+     transform-origin: bottom right;
+     animation: animate 6s linear infinite;
+     animation-delay: -1.5s ;
+}
+.borderLine::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#ff2770,#ff2770,#ff2770);
+     z-index: 1;
+     transform-origin: bottom right;
+     animation: animate 6s linear infinite;
+     animation-delay: -4.5s ;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.login form{
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.login form h2{
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.login form .inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+
+.login form .inputBox input
+{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.login form .inputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.login form .inputBox input:valid ~ span,
+.login form .inputBox input:focus ~ span
+{
+    color: #fff;
+    font-size: 0.75em;
+    transform: translateY(-34px);
+}
+
+.login form .inputBox i
+{
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 2px;
+   background: #fff;
+   border-radius: 4px;
+   overflow: hidden;
+   transition: 0.5s;
+   pointer-events: none;
+
+}
+
+.login form .inputBox input:valid ~ i,
+.login form .inputBox input:focus ~ i
+{
+    height: 44px;
+}
+
+.login form .links
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.login form .links a
+{
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;  
+}
+
+.login form .links a:hover
+{
+   color: #fff;
+}
+
+.login form input[type="submit"]
+{
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.box form input[type="submit"]:active{
+    opacity: 0.8;
+}
